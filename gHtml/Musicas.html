@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>formulario</title>
+    <style>
+      fieldset{
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+      }
+      label{
+        display: inline-block;
+        width: 150px;
+      }
+      input{
+        display: inline-block;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>formulario</h1>
+  <form>
+    <fieldset name="login">
+      <label> email: </label>
+      <input type="email" size="40" placeholder="insira seu email">
+      <br>
+      <label> senha: </label>
+      <input type="password" size="12" placeholder="insira sua senha">
+      <br>
+      <input type="checkbox" name="salvar" value="lembrar">
+      <label> deseja receber notificação de promoções no seu email? </label>
+      
+    </fieldset>
+    <fieldset name="filme">
+      <input type="radio" name="filme" value="star wars">
+      <label> Star Wars </label>
+      <br>
+      <input type="radio" name="filme" value="star trek">
+      <label> Star Trek </label>
+      <br>
+      <input type="radio" name="filme" value="It: A coisa">
+      <label> It: A coisa </label>
+      <br>
+      <input type="radio" name="filme" value="O Iluminado">
+      <label> O Iluminado </label>
+      
+    </fieldset>
+    <fieldset name="horário">
+      <label> defina a data da sessão: </label>
+    <input type="datetime-local" value="2021-09-01T00:00:00">
+    
+    </fieldset>
+    
+  </form>
+  </body>
+</html>
