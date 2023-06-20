@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <script>
+      function cleanCanvas() {
+        var canvas = document.getElementById("meuCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.clearRect (0, 0, 300, 300);
+      }
+      function expandCanvasArea() {
+        var canvas = document.getElementById("meuCanvas");
+        var ctx = canvas.getContext("2d");
+        canvas.width = 1000;
+        canvas.height = 550;
+      }
+      function contractCanvasArea() {
+        var canvas = document.getElementById("meuCanvas");
+        var ctx = canvas.getContext("2d");
+        canvas.width = 600;
+        canvas.height = 500;
+      }
+      function drawLadder() {
+        var canvas = document.getElementById("meuCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle="rgb(255,255,0)"
+        ctx.fillRect=(100,100,100,100);
+        ctx.fillRect=(200,200,200,200);
+        ctx.fillRect=(300,300,300,300);
+      }
+
+      function redrawDefault() {
+        var canvas = document.getElementById("meuCanvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "rgb(225,0,200)";
+        ctx.fillRect (100, 10, 55, 50);
+        ctx.clearStyle="rgb(0,0,0)";
+        ctx.clearRect (200, 20, 35, 30);
+        ctx.strokeStyle = "rgb(0,255,255)";
+        ctx.strokeRect(300, 30, 15, 10);
+      }
+    </script>
+    <style>
+      body {
+        margin: 10;
+        padding: 0;
+      }
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <canvas id="meuCanvas" width="600px" height="550px">
+      N possui suporte ao canvas
+    </canvas>
+    <script>
+      var canvas = document.getElementById("meuCanvas");
+      var ctx = canvas.getContext("2d");
+
+      ctx.fillStyle = "rgb(225,0,200)";
+      ctx.fillRect (10, 10, 55, 50);
+      ctx.clearStyle="rgb(0,0,0)";
+      ctx.clearRect (20, 20, 35, 30);
+      ctx.strokeStyle = "rgb(0,255,255)";
+      ctx.strokeRect(30, 30, 15, 10);
+    </script>
+    <button type="" onClick="expandCanvasArea()">EXPANDIR</button>
+    <button type="" onClick="contractCanvasArea()">CONTRAIR</button>
+    <button type="" onClick="cleanCanvas()">LIMPA ESSA MERDA</button>
+    <button type="" onClick="redrawDefault()">RE-DESENHAR MAIOR</button>
+    <button type="" onClick="drawLadder()">DESENHA ESCADA</button>
+  </body>
+</html>

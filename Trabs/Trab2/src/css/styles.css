@@ -1,0 +1,33 @@
+.bodyStyle
+{
+  background-color: #2b2b2b;
+  display: flex;
+}
+
+.siteHeader
+{
+  width: 100%;
+  background-color: #2fff2f;
+  display: flex;
+  max-height: 50px;
+}
+
+.ulContainer
+{
+  background-color: #6b00b5;
+  width: 20%;
+  float: right;
+}
+.navUl
+{
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0;
+}
+
+.navLi
+{
+  margin: 5%;
+  list-style: none;
+}
