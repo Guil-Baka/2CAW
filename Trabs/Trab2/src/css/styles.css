@@ -113,10 +113,12 @@ header > .outlinedButtonPrimary
 {
   background-color: violet;
   margin: 0;
-  width: 10%;
-  height: 10%;
+  /* width: 10%;
+  height: 10%; */
+  height: 0;
   align-self: center;
-  margin-left: 2%;
+  /* margin-left: 2%; */
+  display: none;
 }
 
 .buttonHeaderGroup
@@ -124,12 +126,9 @@ header > .outlinedButtonPrimary
   align-self: flex-end;
   display: flex;
   flex-direction: row;
-  align-content: flex-start;
-  background-color: greenyellow;
-  width: 30%;
+  align-content: flex-end;
   height: 100%;
-  margin-left: 60%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .headerButton
@@ -140,10 +139,9 @@ header > .outlinedButtonPrimary
   font-style: normal;
   font-weight: 600;
   font-family: 'JetBrains Mono', monospace;
-  text-align: start;
+  text-align: center;
   width: 25%;
   height: 100%;
-  border: 1px 1px 1px 1px solid white;
 }
 /* onHover */
 .headerButton:hover
@@ -152,13 +150,20 @@ header > .outlinedButtonPrimary
   color: var(--text-light-primary);
 }
 
+.nextButton
+{
+  display: none;
+  visibility: hidden;
+  width: 0;
+}
+
 
 /* Se a tela tiver 769px ou mais de largura */
 @media screen and (min-width: 769px) 
 {
   .smallText
   {
-    margin-top: 7.5%;
+    margin-top: 4.5%;
     font-size: 2vw;
   }
 
@@ -248,11 +253,46 @@ header > .outlinedButtonPrimary
     margin-top: 5%;
     margin-left: 23%;
   }
+
+  .buttonHeaderGroup
+  {
+    display: none;
+    width: 0%;
+    flex-direction;
+  }
+
+  .headerButton
+  {
+    display: none;
+    width: 0%;
+  }
+
+  header > .outlinedButtonPrimary
+  {
+    visibility: hidden;
+    display: none;
+    width: 0%;
+  }
+
+  .nextButton
+  { 
+    background-color: var(--background);
+    max-width: 100px;
+    aspect-ratio: 1/1;
+    width: 25%;
+    padding: auto;
+    color: var(--primary);
+    border-color: transparent;
+    border-radius: 100%;
+    align-items: center;
+    display: block;
+    visibility: visible;
+    align-self: flex-end;
+    margin-right: 2%;
+  }
+  .nextButton:hover
+  {
+    background-color: var(--background);
+    color: lime;
+  }
 }
-
-
-
-
-
-
-
