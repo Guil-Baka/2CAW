@@ -1,6 +1,5 @@
 /* Css variables for color */
-:root
-{
+:root {
   --primary: #00FFFF;
   --primary-dark: #007979;
   --background: #2b2b2b;
@@ -16,8 +15,7 @@ font-family: 'Inter', sans-serif;
 font-family: 'JetBrains Mono', monospace;
 */
 
-.bodyStyle
-{
+.bodyStyle {
   background-color: var(--background);
   display: flex;
   flex-direction: column;
@@ -26,8 +24,7 @@ font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
 }
 
-.siteHeader
-{
+.siteHeader {
   /* align-self: flex-start; */
   width: 100%;
   height: 75px;
@@ -40,8 +37,7 @@ font-family: 'JetBrains Mono', monospace;
   overflow: visible;
 }
 
-.mainSection 
-{
+.mainSection {
   min-width: 50%;
   max-width: 100%;
   display: flex;
@@ -52,63 +48,54 @@ font-family: 'JetBrains Mono', monospace;
 }
 
 /* animação para deslizar da esquerda */
-@keyframes deslizarEsq 
-{
-  0% 
-  {
+@keyframes deslizarEsq {
+  0% {
     transform: translateX(-100%);
   }
-  100% 
-  {
+
+  100% {
     transform: translateX(0);
   }
 }
 
 /* animação para deslizar da direita */
-@keyframes deslizarDir 
-{
-  0% 
-  {
+@keyframes deslizarDir {
+  0% {
     transform: translateX(100%);
   }
-  100% 
-  {
+
+  100% {
     transform: translateX(0);
   }
 }
 
 /* animação para surgir */
-@keyframes fadeIn 
-{
-  0% 
-  {
+@keyframes fadeIn {
+  0% {
     opacity: 0;
   }
-  70% 
-  {
+
+  70% {
     opacity: 0;
   }
-  100% 
-  {
+
+  100% {
     opacity: 1;
   }
 }
 
 /* animação para fazer o backgroudn dar fadein */
-@keyframes fadeInBackground 
-{
-  0% 
-  {
+@keyframes fadeInBackground {
+  0% {
     background-color: transparent;
   }
-  100% 
-  {
+
+  100% {
     background-color: var(--background-lighter);
   }
 }
 
-.smallText
-{
+.smallText {
   font-size: 1.042vw;
   color: var(--primary);
   font-weight: 400;
@@ -118,8 +105,7 @@ font-family: 'JetBrains Mono', monospace;
   animation-duration: 1.5s;
 }
 
-.headTextPrimary
-{
+.headTextPrimary {
   font-size: 2.75vw;
   color: var(--text-dark-primary);
   font-style: normal;
@@ -130,8 +116,7 @@ font-family: 'JetBrains Mono', monospace;
   animation-duration: 2.5s;
 }
 
-.headTextSecondary
-{
+.headTextSecondary {
   font-size: 2.75vw;
   color: var(--text-dark-secondary);
   font-style: normal;
@@ -142,8 +127,7 @@ font-family: 'JetBrains Mono', monospace;
   animation-duration: 3s;
 }
 
-.paragraphText 
-{
+.paragraphText {
   font-size: 1.875vw;
   color: var(--text-dark-secondary);
   font-style: normal;
@@ -154,8 +138,7 @@ font-family: 'JetBrains Mono', monospace;
   animation-duration: 3s;
 }
 
-.experienceBox 
-{
+.experienceBox {
   animation-delay: 1s;
   width: 99999px;
   max-width: 75%;
@@ -174,25 +157,23 @@ font-family: 'JetBrains Mono', monospace;
   animation-fill-mode: forwards;
 }
 
-.asideProject
-{
-  align-self: flex-end; 
-  min-width: 15%; 
+.asideProject {
+  align-self: flex-end;
+  min-width: 15%;
   border-bottom: 2px solid;
   border-left: 2px solid;
   border-top: 2px solid;
   border-color: var(--primary);
-  border-radius: 15px 0 0 15px; 
-  height: 500px; 
-  background-color:var(--background-lighter);
+  border-radius: 15px 0 0 15px;
+  height: 500px;
+  background-color: var(--background-lighter);
   animation-name: deslizarDir;
   animation-duration: 2s;
   display: flex;
   flex-direction: column;
 }
 
-.iconContainer
-{
+.iconContainer {
   aspect-ratio: 1/1;
   width: 100px;
   padding: auto;
@@ -200,8 +181,7 @@ font-family: 'JetBrains Mono', monospace;
   margin-right: auto;
 }
 
-.projectLink 
-{
+.projectLink {
   font-size: 1.5vw;
   color: var(--primary-dark);
   font-style: normal;
@@ -215,14 +195,12 @@ font-family: 'JetBrains Mono', monospace;
   text-decoration: underline;
 }
 
-.projectLink:visited
-{
+.projectLink:visited {
   color: var(--primary);
   text-decoration: overline;
 }
 
-.linkBox
-{
+.linkBox {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -234,8 +212,7 @@ font-family: 'JetBrains Mono', monospace;
   background-color: var(--background);
 }
 
-.outlinedButtonPrimary
-{
+.outlinedButtonPrimary {
   background-color: var(--background);
   color: var(--text-dark-primary);
   border: 1px solid var(--primary);
@@ -251,15 +228,15 @@ font-family: 'JetBrains Mono', monospace;
   animation-name: fadeIn;
   animation-duration: 3.5s;
 }
+
 /* onHover */
-.outlinedButtonPrimary:hover
-{
+.outlinedButtonPrimary:hover {
   background-color: var(--primary);
   color: var(--text-light-primary);
 }
+
 /* Não usei achei desnecessário */
-header > .outlinedButtonPrimary
-{
+header>.outlinedButtonPrimary {
   background-color: violet;
   margin: 0;
   /* width: 10%;
@@ -270,8 +247,7 @@ header > .outlinedButtonPrimary
   display: none;
 }
 
-.buttonHeaderGroup
-{
+.buttonHeaderGroup {
   align-self: flex-end;
   display: flex;
   flex-direction: row;
@@ -284,8 +260,7 @@ header > .outlinedButtonPrimary
   min-width: 40%;
 }
 
-.headerButton
-{
+.headerButton {
   font-size: 0.75vw;
   color: var(--text-dark-primary);
   background-color: var(--background);
@@ -300,9 +275,9 @@ header > .outlinedButtonPrimary
   min-width: 70px;
   padding: 1%;
 }
+
 /* onHover */
-.headerButton:hover
-{
+.headerButton:hover {
   background-color: var(--primary);
   border-right: 1px solid var(--primary);
   color: var(--text-light-primary);
@@ -310,32 +285,27 @@ header > .outlinedButtonPrimary
 
 /* Padrão desktop */
 /* Se a tela tiver 769px ou mais de largura */
-@media screen and (min-width: 769px) 
-{
-  .smallText
-  {
+@media screen and (min-width: 769px) {
+  .smallText {
     margin-top: 0%;
     font-size: 2vw;
   }
 
-  .headTextPrimary
-  {
+  .headTextPrimary {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 2%;
     font-size: 2vw;
   }
 
-  .headTextSecondary
-  {
+  .headTextSecondary {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 2%;
     font-size: 2vw;
   }
 
-  .paragraphText
-  {
+  .paragraphText {
     margin-top: 3%;
     margin-bottom: 0;
     margin-left: 2%;
@@ -343,14 +313,12 @@ header > .outlinedButtonPrimary
     max-width: 75%;
   }
 
-  .mainSection
-  {
+  .mainSection {
     margin-top: 10%;
     padding-left: 10%;
   }
 
-  .outlinedButtonPrimary
-  {
+  .outlinedButtonPrimary {
     margin-top: 2.5%;
     margin-bottom: 2%;
     margin-left: 2%;
@@ -359,47 +327,41 @@ header > .outlinedButtonPrimary
     font-size: 1.5vw;
   }
 }
+
 /* Eu ia fazer responsivo mas da mto trabalho fé */
 /* Se a tela tiver 768px ou menos de largura */
-@media screen and (max-width: 768px)
-{
-  .smallText
-  {
+@media screen and (max-width: 768px) {
+  .smallText {
     font-size: 3.5vw;
     margin-bottom: 0;
   }
 
-  .headTextPrimary
-  {
+  .headTextPrimary {
     margin-top: 5%;
     font-size: 5vw;
     margin-left: 5%;
     margin-bottom: 0;
   }
 
-  .headTextSecondary
-  {
+  .headTextSecondary {
     font-size: 5vw;
     margin-left: 5%;
     margin-top: 0;
   }
 
-  .paragraphText 
-  {
+  .paragraphText {
     font-size: 4vw;
     margin-left: 5%;
     margin-top: 0;
   }
 
-  .mainSection
-  { 
+  .mainSection {
     margin-bottom: 0;
     max-width: 100%;
     margin-left: 2%;
   }
 
-  .outlinedButtonPrimary
-  {
+  .outlinedButtonPrimary {
     height: 25%;
     width: 50%;
     margin-bottom: 2.5%;
@@ -407,28 +369,24 @@ header > .outlinedButtonPrimary
     margin-left: 23%;
   }
 
-  .buttonHeaderGroup
-  {
+  .buttonHeaderGroup {
     display: none;
     width: 0%;
-    flex-direction: row; 
+    flex-direction: row;
   }
 
-  .headerButton
-  {
+  .headerButton {
     display: none;
     width: 0%;
   }
 
-  header > .outlinedButtonPrimary
-  {
+  header>.outlinedButtonPrimary {
     visibility: hidden;
     display: none;
     width: 0%;
   }
 
-  .nextButton
-  { 
+  .nextButton {
     background-color: var(--background);
     max-width: 100px;
     aspect-ratio: 1/1;
@@ -443,8 +401,8 @@ header > .outlinedButtonPrimary
     align-self: flex-end;
     margin-right: 2%;
   }
-  .nextButton:hover
-  {
+
+  .nextButton:hover {
     background-color: var(--background);
     color: lime;
   }
