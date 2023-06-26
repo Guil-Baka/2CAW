@@ -257,7 +257,7 @@ font-family: 'JetBrains Mono', monospace;
   background-color: var(--primary);
   color: var(--text-light-primary);
 }
-
+/* Não usei achei desnecessário */
 header > .outlinedButtonPrimary
 {
   background-color: violet;
@@ -308,7 +308,7 @@ header > .outlinedButtonPrimary
   color: var(--text-light-primary);
 }
 
-
+/* Padrão desktop */
 /* Se a tela tiver 769px ou mais de largura */
 @media screen and (min-width: 769px) 
 {
@@ -359,7 +359,7 @@ header > .outlinedButtonPrimary
     font-size: 1.5vw;
   }
 }
-
+/* Eu ia fazer responsivo mas da mto trabalho fé */
 /* Se a tela tiver 768px ou menos de largura */
 @media screen and (max-width: 768px)
 {
