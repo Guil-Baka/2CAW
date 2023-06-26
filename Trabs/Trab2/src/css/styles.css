@@ -2,7 +2,9 @@
 :root
 {
   --primary: #00FFFF;
+  --primary-dark: #007979;
   --background: #2b2b2b;
+  --background-lighter: #323232;
   --text-dark-primary: #FFFFFF;
   --text-dark-secondary: #888888;
   --text-dark-paragraph: #AFAFAF;
@@ -34,10 +36,11 @@ font-family: 'JetBrains Mono', monospace;
   border-bottom: 1px solid var(--primary);
   margin-bottom: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: visible;
 }
 
-.mainSection
+.mainSection 
 {
   min-width: 50%;
   max-width: 100%;
@@ -48,6 +51,62 @@ font-family: 'JetBrains Mono', monospace;
   background-color: var(--background);
 }
 
+/* animação para deslizar da esquerda */
+@keyframes deslizarEsq 
+{
+  0% 
+  {
+    transform: translateX(-100%);
+  }
+  100% 
+  {
+    transform: translateX(0);
+  }
+}
+
+/* animação para deslizar da direita */
+@keyframes deslizarDir 
+{
+  0% 
+  {
+    transform: translateX(100%);
+  }
+  100% 
+  {
+    transform: translateX(0);
+  }
+}
+
+/* animação para surgir */
+@keyframes fadeIn 
+{
+  0% 
+  {
+    opacity: 0;
+  }
+  70% 
+  {
+    opacity: 0;
+  }
+  100% 
+  {
+    opacity: 1;
+  }
+}
+
+/* animação para fazer o backgroudn dar fadein */
+@keyframes fadeInBackground 
+{
+  0% 
+  {
+    background-color: transparent;
+  }
+  100% 
+  {
+    background-color: var(--background-lighter);
+  }
+}
+
 .smallText
 {
   font-size: 1.042vw;
@@ -55,6 +114,8 @@ font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
   font-family: 'JetBrains Mono', monospace;
   text-align: start;
+  animation-name: deslizarEsq;
+  animation-duration: 1.5s;
 }
 
 .headTextPrimary
@@ -65,6 +126,8 @@ font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
   font-family: 'JetBrains Mono', monospace;
   text-align: start;
+  animation-name: fadeIn;
+  animation-duration: 2.5s;
 }
 
 .headTextSecondary
@@ -75,6 +138,8 @@ font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
   font-family: 'Jetrains Mono', monospace;
   text-align: start;
+  animation-name: fadeIn;
+  animation-duration: 3s;
 }
 
 .paragraphText 
@@ -85,6 +150,8 @@ font-family: 'JetBrains Mono', monospace;
   font-weight: 400;
   font-family: 'Inter', sans-serif;
   text-align: start;
+  animation-name: fadeIn;
+  animation-duration: 3s;
 }
 
 .outlinedButtonPrimary
@@ -101,6 +168,8 @@ font-family: 'JetBrains Mono', monospace;
   min-height: 10px;
   text-align: center;
   align-self: flex-start;
+  animation-name: fadeIn;
+  animation-duration: 3.5s;
 }
 /* onHover */
 .outlinedButtonPrimary:hover
@@ -124,12 +193,13 @@ header > .outlinedButtonPrimary
   align-self: flex-end;
   display: flex;
   flex-direction: row;
-  align-content: flex-start;
+  align-content: flex-end;
+  justify-self: flex-end;
   background-color: greenyellow;
   width: 30%;
   height: 100%;
-  margin-left: 60%;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  min-width: 40%;
 }
 
 .headerButton
@@ -137,28 +207,111 @@ header > .outlinedButtonPrimary
   font-size: 0.75vw;
   color: var(--text-dark-primary);
   background-color: var(--background);
+  border-color: transparent;
+  border-right: 1px solid var(--primary-dark);
   font-style: normal;
   font-weight: 600;
   font-family: 'JetBrains Mono', monospace;
   text-align: start;
   width: 25%;
   height: 100%;
-  border: 1px 1px 1px 1px solid white;
+  min-width: 70px;
+  padding: 1%;
 }
 /* onHover */
 .headerButton:hover
 {
   background-color: var(--primary);
+  border-right: 1px solid var(--primary);
   color: var(--text-light-primary);
 }
 
+.experienceBox 
+{
+  animation-delay: 1s;
+  width: 99999px;
+  max-width: 75%;
+  max-height: 300px;
+  height: 300px;
+  margin: 1%;
+  padding: 1%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  animation-name: fadeInBackground;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+.asideProject
+{
+  align-self: flex-end; 
+  min-width: 15%; 
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  border-color: var(--primary);
+  border-radius: 15px 0 0 15px; 
+  height: 500px; 
+  background-color:var(--background-lighter);
+  animation-name: deslizarDir;
+  animation-duration: 2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.iconContainer
+{
+  aspect-ratio: 1/1;
+  width: 100px;
+  padding: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectLink 
+{
+  font-size: 1.5vw;
+  color: var(--primary-dark);
+  font-style: normal;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: start;
+  width: 100%;
+  height: 100%;
+  min-width: 70px;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.projectLink:visited
+{
+  color: var(--primary);
+  text-decoration: overline;
+}
+
+.linkBox
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1%;
+  margin: 1%;
+  animation-name: fadeIn;
+  background-color: var(--background);
+}
 
 /* Se a tela tiver 769px ou mais de largura */
 @media screen and (min-width: 769px) 
 {
   .smallText
   {
-    margin-top: 7.5%;
+    margin-top: 0%;
     font-size: 2vw;
   }
 
@@ -195,10 +348,12 @@ header > .outlinedButtonPrimary
 
   .outlinedButtonPrimary
   {
-    margin-top: 5%;
+    margin-top: 2.5%;
     margin-bottom: 2%;
-    margin-left: 25%;
-    text-decoration: wavy underline 2px ;
+    margin-left: 2%;
+    min-width: 30%;
+    min-height: 75px;
+    font-size: 1.5vw;
   }
 }
 

@@ -1,0 +1,4 @@
+function navigateToNewWindow(url) {
+    window.open(url, "_blank");
+    console.log("Redirecting to " + url);
+}
