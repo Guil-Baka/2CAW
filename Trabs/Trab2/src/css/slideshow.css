@@ -1,0 +1,54 @@
+/* div to contain slideshow */
+.slideshow-container {
+  max-width: 75%;
+  width: 75%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  background-color: #323232;
+  border-radius: 15px;
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+/* images in slideshow */
+.mySlides {
+  max-width: 10%;
+  width: 100%;
+  height: auto;
+  margin: 5%;
+}
+
+/* expand image on hover */
+.mySlides:hover {
+  transform: scale(1.25);
+  transition: transform 0.5s;
+}
+
+@keyframes fadeInBackground {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: var(--background-lighter);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
